@@ -1,15 +1,7 @@
-# PHP Password Cracker
-PHP package to crack passwords
+<?php
 
-## Installation
+require_once(__DIR__.'/vendor/autoload.php');
 
-```bash
-composer require divineomega/php-password-cracker
-```
-
-## Usage
-
-```php
 use DivineOmega\PasswordCracker\Crackers\DictionaryCracker;
 
 $hash = password_hash('secret', PASSWORD_BCRYPT);
@@ -23,5 +15,3 @@ $password = (new DictionaryCracker())->crack($hash, function($passwordBeingCheck
 */
 
 echo 'Password found: '.$password.PHP_EOL;
-
-```
