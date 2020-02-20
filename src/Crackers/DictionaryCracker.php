@@ -13,6 +13,11 @@ class DictionaryCracker
         $this->passwords = file(__DIR__ . '/../../resources/password-list.txt', FILE_IGNORE_NEW_LINES);
     }
 
+    public function getPasswordCount()
+    {
+        return count($this->passwords);
+    }
+
     public function crack(string $hash, callable $onProgress = null): ?string
     {
         $return = null;
