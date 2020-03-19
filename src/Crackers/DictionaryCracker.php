@@ -13,7 +13,7 @@ class DictionaryCracker
         $this->passwords = file(__DIR__ . '/../../resources/password-list.txt', FILE_IGNORE_NEW_LINES);
     }
 
-    public function getPasswordCount()
+    public function getPasswordCount(): int
     {
         return count($this->passwords);
     }
